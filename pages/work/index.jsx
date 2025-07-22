@@ -29,8 +29,7 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              tempora eligendi, quisquam tempore sint reiciendis.
+              Crafting intuitive mobile apps and immersive XR experiences using iOS, Unity, and Blender — blending design, code, and creativity.
             </motion.p>
           </div>
 

@@ -1,11 +1,5 @@
-import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
-  RxArrowTopRight,
-} from "react-icons/rx";
+import { SiAndroid, SiApple, SiUnity, SiBlender } from "react-icons/si";
+import { FaMobileAlt } from "react-icons/fa";
 import { FreeMode, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,29 +9,24 @@ import "swiper/css/pagination";
 
 const serviceData = [
   {
-    Icon: RxCrop,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    Icon: FaMobileAlt,
+    title: "Mobile App Development",
+    description: "Cross-platform mobile apps for Android and iOS using modern frameworks.",
   },
   {
-    Icon: RxPencil2,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    Icon: SiApple,
+    title: "iOS Development",
+    description: "Native iOS applications with Swift and the latest Apple technologies.",
   },
   {
-    Icon: RxDesktop,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    Icon: SiUnity,
+    title: "Unity Development",
+    description: "Interactive 3D, XR, and game experiences using Unity.",
   },
   {
-    Icon: RxReader,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    Icon: RxRocket,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    Icon: SiBlender,
+    title: "Blender 3D",
+    description: "3D modeling, animation, and asset creation with Blender.",
   },
 ];
 
@@ -73,14 +62,6 @@ const ServiceSlider = () => {
             <div className="mb-8">
               <div className="mb-2 text-lg">{item.title}</div>
               <p className="max-w-[350px] leading-normal">{item.description}</p>
-            </div>
-
-            {/* arrow */}
-            <div className="text-3xl">
-              <RxArrowTopRight
-                className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300"
-                aria-hidden
-              />
             </div>
           </div>
         </SwiperSlide>

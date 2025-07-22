@@ -7,21 +7,36 @@ import { useState } from "react";
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setIsLoading(true);
 
     const myForm = event.target;
-    const formData = new FormData(myForm);
+    const formData = {
+      name: myForm.name.value,
+      email: myForm.email.value,
+      subject: myForm.subject.value,
+      message: myForm.message.value,
+    };
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => alert("Thank you. I will get back to you ASAP."))
-      .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        alert('Thank you. I will get back to you ASAP.');
+        myForm.reset();
+      } else {
+        const data = await response.json();
+        alert('Error: ' + (data.message || 'Something went wrong.'));
+      }
+    } catch (error) {
+      alert('Error: ' + error.message);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -50,8 +65,6 @@ const Contact = () => {
             onSubmit={handleSubmit}
             autoComplete="off"
             autoCapitalize="off"
-            // only needed for production (in netlify) to accept form input
-            data-netlify="true"
           >
             {/* input group */}
             <div className="flex gap-x-6 w-full">

@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import TopLeftImg from "../components/TopLeftImg";
 
 // setup font
 const sora = Sora({
@@ -15,14 +14,14 @@ const sora = Sora({
 const Layout = ({ children }) => {
   return (
     <main
-      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
+      className={`page bg-black text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
     >
       {/* metadata */}
       <Head>
-        <title>Ethan Smith | Portfolio</title>
+        <title>Younuzbn | Portfolio</title>
         <meta
           name="description"
-          content="Ethan Smith is a Full-stack web developer with 10+ years of experience."
+          content="Younuzbn is a Software Engineer with 2+ years of experience."
         />
         <meta
           name="keywords"
@@ -32,7 +31,6 @@ const Layout = ({ children }) => {
         <meta name="theme-color" content="#f13024" />
       </Head>
 
-      <TopLeftImg />
       <Nav />
       <Header />
 

@@ -2,18 +2,17 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import CountUp from "react-countup";
 import {
-  FaCss3,
-  FaFigma,
-  FaHtml5,
-  FaJs,
-  FaReact,
-  FaWordpress,
+  FaAndroid,
+  FaApple,
+  FaJava,
 } from "react-icons/fa";
 import {
-  SiAdobephotoshop,
-  SiAdobexd,
-  SiFramer,
-  SiNextdotjs,
+  SiFlutter,
+  SiSwift,
+  SiKotlin,
+  SiDart,
+  SiUnity,
+  SiBlender,
 } from "react-icons/si";
 
 import Avatar from "../../components/Avatar";
@@ -26,20 +25,20 @@ export const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Web Development",
+        title: "Mobile App Development",
         icons: [
-          FaHtml5,
-          FaCss3,
-          FaJs,
-          FaReact,
-          SiNextdotjs,
-          SiFramer,
-          FaWordpress,
+          FaAndroid,
+          FaApple,
+          SiFlutter,
+          SiSwift,
+          SiKotlin,
+          FaJava,
+          SiDart,
         ],
       },
       {
-        title: "UI/UX Design",
-        icons: [FaFigma, SiAdobexd, SiAdobephotoshop],
+        title: "XR Development",
+        icons: [SiUnity, SiBlender],
       },
     ],
   },
@@ -47,12 +46,12 @@ export const aboutData = [
     title: "awards",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "Best Performance Award",
+        stage: "2025",
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "Smallest iOS App Built in 2025",
+        stage: "2025",
       },
     ],
   },
@@ -60,16 +59,16 @@ export const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Software Engineer, WebCastle Media Pvt Ltd",
+        stage: "2025",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "Jr. iOS Developer, WebCastle Media Pvt Ltd",
+        stage: "2024 - 2025",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Intern - Zoople Technologies",
+        stage: "2024 - 2024",
       },
     ],
   },
@@ -77,16 +76,16 @@ export const aboutData = [
     title: "credentials",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
+        title: "Bachlors in Computer Science, University of calicut",
+        stage: "2024",
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
+        title: "National Institute of Open Schooling",
+        stage: "2021",
       },
       {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "Higher Secondary, MUM VHSS School, Vadakara",
+        stage: "2015",
       },
     ],
   },
@@ -129,9 +128,7 @@ const About = () => {
             animate="show"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I begin freelancing as a developer. Since then, I've
-            done remote work for agencies, consulted for startups, and
-            collabrated on digital products for business and consumer use.
+            I completed my Bachelor's in Computer Science in 2024. Since then, I've been working as a Software Engineer at WebCastle Media Pvt Ltd, contributing to digital products for both business and consumer use.
           </motion.p>
 
           {/* counters */}
@@ -145,7 +142,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} />
+                  <CountUp start={0} end={2} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience.
@@ -155,20 +152,20 @@ const About = () => {
               {/* clients */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} />
+                  <CountUp start={0} end={40} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients.
+                  Projects.
                 </div>
               </div>
 
               {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} />
+                  <CountUp start={0} end={200000} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished projects.
+                  Lines of code.
                 </div>
               </div>
 
@@ -178,7 +175,7 @@ const About = () => {
                   <CountUp start={0} end={8} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning awards.
+                  Certifications.
                 </div>
               </div>
             </div>

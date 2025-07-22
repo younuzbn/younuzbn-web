@@ -32,10 +32,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
-            exercitationem harum, quia nulla temporibus deleniti libero veniam
-            vero beatae numquam ducimus illum ab similique ipsam tempore fugit
-            quod laudantium debitis.
+            iOS and XR developer focused on building sleek, high-performance apps. Skilled in Swift, ARKit, and Unity, with a passion for clean code, intuitive UX, and crafting immersive digital experiences.
           </motion.p>
 
           {/* btn */}
